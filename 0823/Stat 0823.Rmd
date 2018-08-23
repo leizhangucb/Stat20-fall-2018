@@ -1,0 +1,94 @@
+---
+title: "Stat20 0823"
+output: html_document
+---
+##Introduction
+* Prof. Stoyanov's Lectures: TuTh 9:30-11 AM, 2050 Valley Life Sciences Bldg
+* GSI : Lei Zhang
+* Email: lei_zhang@berkeley.edu
+* Office Hour: 
+* Books: Statistics (fourth edition) by Freedman, Pisani and Purves 
+* Software: R and R Studio for statistical analysis 
+* Homework: 
+* Quiz: 15min quiz every week. No cheatsheet. 3 quizzes can be dropped.
+* You are not getting graded on the attendance
+
+
+
+
+##Download R and RStudio
+###Mac Users
+To Install R
+
+1.  Open an internet browser and go to https://cran.cnr.berkeley.edu/.
+2.  Click on the "Download R for (Mac) OS X" link at the top of the page.
+3.  Click on the file containing the latest version of R
+4.  Save the .pkg file, double-click it to open, and follow the installation instructions
+
+Now that R is installed, you need to download and install RStudio.
+
+To Install RStudio
+
+1.  Go to www.rstudio.com and click on the "Download RStudio" button.
+2.  Click on "Download RStudio Desktop."
+3.  Click on the version recommended for your system, or the latest Mac version, save the .dmg file on your computer, double-click it to open, and then drag and drop it to your applications folder.
+
+
+###Windows Users
+To Install R:
+
+1.  Open an internet browser and go to https://cran.cnr.berkeley.edu/.
+2.  Click on the "Download R for Windows" link at the top of the page.
+3.  Click on "install R for the first time."
+4.  Click on "Download R 3.5.1 for Windows "
+5.  Click "Download R for Windows" and save the executable file somewhere on your computer.  
+6.  Run the .exe file and follow the installation instructions.  
+
+Now that R is installed, you need to download and install RStudio. 
+
+To Install RStudio,
+
+1.  Go to www.rstudio.com and click on the "Download RStudio" button.
+1.  Click on "Download RStudio Desktop."
+3.  Click on the version recommended for your system, or the latest Windows version, and save the executable file.  
+4.  Run the .exe file and follow the installation instructions.     
+
+
+##Download ggplot2
+```{r, eval = FALSE}
+install.packages("ggplot2")
+```
+
+After you download ggplot2, remeber to load it. A few examples of ggplot2.
+
+```{r}
+library(ggplot2)
+
+data("midwest", package = "ggplot2")#load the data
+head(midwest)#return the first part of data
+tail(midwest)#return the last part of data
+```
+
+```{r}
+#simple scatter plot
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_point()
+```
+
+```{r}
+#simple line plot
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_line()
+```
+
+```{r}
+#scatter plot iwth title
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_point() +
+  labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics")
+```
+
+
+##References
+* https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/
+* http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html
