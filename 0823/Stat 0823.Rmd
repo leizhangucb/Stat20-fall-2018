@@ -10,7 +10,7 @@ output: html_document
 * Books: Statistics (fourth edition) by Freedman, Pisani and Purves 
 * Software: R and R Studio for statistical analysis 
 * Homework: 
-* Quiz: 15min quiz every week. No cheatsheet. 3 quizzes can be dropped.
+* Quiz: biweekly with the first quiz on September 6
 * You are not getting graded on the attendance
 
 

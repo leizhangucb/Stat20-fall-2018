@@ -1,0 +1,14 @@
+#From professor  , Thanks, Raz! 
+Lurking variables are unseen variables, usually in observational studies that cause us to think that there is an association between two variables, but this association is just induced by the variables association with that third unseen variable.
+
+Confounding variables are in studies or experiments (if not well - designed) where we have a variable that we have not controlled for and we can't tell if the response value is because of our explanatory variable or because of this variable that we did not control for, and so we can't attribute the response difference to the explanatory variable. 
+
+#Example:
+We try to figure out the relationship between one's wage and education(years of education)
+
+Rough idea: draw a scatter plot of education and wage and see if there is relationship (Or if you know regression, use it!)
+
+What's the possible Lurking variables and confounding variables?
+
+Lurking variables: Ability
+Confounding variables: Age, Sex...
