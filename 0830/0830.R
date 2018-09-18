@@ -3,7 +3,7 @@ x <- 1:10
 #2
 y <- -4:0
 #3
-x = y
+x + y
 #4
 berk.temp <- c(68, 73, 71, 74, 73, 73, 73, 74, 72)
 length(berk.temp)
@@ -15,7 +15,7 @@ berk.temp.c <- (berk.temp-32)/1.8
 sample(berk.temp, size = 4)
 sample(berk.temp, size = 4, replace = TRUE)
 #8
-six_sided <- 1:6
+six_sided <- 1:6#create the vector, same as six_sided <- c(1,2,3,4,5,6)
 sample(six_sided, size = 1)
 #9
 sample(six_sided, size = 1) + sample(six_sided, size = 1)
@@ -45,4 +45,5 @@ mean(family$weight)
 dim(family)[1]
 #18
 0.453592*family$weight
-0.0254*family$height
+0.025
+4*family$height
