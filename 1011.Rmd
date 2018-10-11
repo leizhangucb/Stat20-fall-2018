@@ -1,0 +1,56 @@
+---
+title: '1011'
+output: html_document
+---
+
+##Datacamp
+##Here is the link: https://www.datacamp.com/groups/shared_links/1180e5cf702aa4e24b3c87b719ba8229790e5f7d
+
+#Assignments
+1.  Introduction
+2.  Data
+3.  Aesthetics
+4.  Geometries
+5.  qplot and wrap up.
+
+
+##Download ggplot2
+```{r, eval = FALSE}
+install.packages("ggplot2")
+```
+
+After you download ggplot2, remeber to load it. A few examples of ggplot2.
+
+```{r}
+library(ggplot2)
+
+data("midwest", package = "ggplot2")#load the data
+head(midwest)#return the first part of data
+tail(midwest)#return the last part of data
+```
+
+```{r}
+#simple scatter plot
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_point()
+```
+
+```{r}
+#simple line plot
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_line()
+```
+
+```{r}
+#scatter plot iwth title
+ggplot(midwest, aes(x=area, y=poptotal)) +
+  geom_point() +
+  labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics")
+```
+
+
+
+
+##References
+* https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/
+* http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html
