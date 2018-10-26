@@ -1,0 +1,74 @@
+---
+title: "Stat 1025"
+output: html_document
+---
+##Correlation
+#Calculate correlation coefficients using R
+
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 6, 7)
+y <- c(3 ,5 ,4, 8, 11, 10, 12)
+#calculate the correlation coefficient using the built-in function
+cor(x,y)
+cor(y,x)
+cor(x, -y)
+cor(2*x, y)
+cor(2*x, -3*y)
+
+#use the method in the textbook
+SU_x <- (x-mean(x))/sqrt(mean((x-mean(x))^2))
+SU_y <- (y-mean(y))/sqrt(mean((y-mean(y))^2))
+mean(SU_x*SU_y)
+```
+
+#Correlation matrix and heatmap
+The correlation matrix is simply a table of correlations. The diagonal elements are always one, since the correlation between a list and itself is one. 
+
+```{r}
+library(ggplot2)
+library(reshape2)
+
+x <- c(1, 2, 3, 4, 5, 6, 7)
+y <- c(3 ,5 ,4, 8, 11, 10, 12)
+z <- c(-3, -1, 0, -9, - 8, -10, -12)
+data <- data.frame(x = x, y = y, z = z)
+cordata <- cor(data)
+cordata
+
+#plot the correlation matrix heatmap
+#melt data to bring the correlation values in two axis
+melted_cordata <- melt(cordata)
+head(melted_cordata)
+
+ggplot(melted_cordata, aes(Var1, Var2)) +
+  geom_tile(aes(fill = value), color = "white") +
+  scale_fill_gradient(low = "white", high = "steelblue") +
+  ylab("Variables ") +
+  xlab("Variables") +
+  theme(legend.title = element_text(size = 10),
+        legend.text = element_text(size = 12),
+        plot.title = element_text(size=16),
+        axis.title=element_text(size=14,face="bold"),
+        axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+
+```{r}
+#install.packages("GGally")
+library(GGally)
+pairs(data,pch=19)
+ggpairs(data)
+ggcorr(data)
+```
+```{r}
+#Positive correlations are displayed in blue and negative correlations in red #color. Color intensity and the size of the circle are proportional to the #correlation coefficients.
+#install.packages("corrplot")
+library(corrplot)
+corrplot(cordata)
+corrplot(cordata,method = "ellipse")
+corrplot(cordata,method = "square")
+
+
+```
+
