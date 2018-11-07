@@ -1,0 +1,54 @@
+---
+title: "Stat20 Summary"
+output: html_document
+---
+
+#Chapter 9 Correlation Coefficient
+1.  The correlation coefficient is a pure number, without units.
+2.  The correlaiton coefficient measures clustering around a line, relative to the SDs.
+3.  The correlation coefficent can be misleading in the presence of outliers or non-linear association. Whenever possible, look at the scatter diagram to check for these problems.
+4.  Ecological correlations, which are based on rates or averages, tend to overstate the strength of associations for individuals.
+5.  Correlation measures association. But association does not necessarily show causation. It may only show that both variables are simultaneously influenced by some third variable.
+
+
+
+#Chapter 10 Regression
+
+##Within chapter
+
+1.  The regression line for y on x estimates the average value for y corresponding to each value of x.
+2.  Assocated with each increase of one SD in x there is an increase of only r*SDs in y, on the average
+3.  The regressionline is a smoothed version of the graph of averages. If the graph of averages follows a straight line, that line is the regression line.
+4.  In virtually all test-retest situations, the bottom group on the first test willon average show some improvement on the second test - and the top group will on average fall back. This is the regression effect.
+
+#Summary
+
+1.  Associated with an increase of one SD in x, there is an increase of only r SDs in y, on the average. Plotting these regression estimates gives the regression line for y on x.
+2.  The graph of averages is often close to a straight line, but may be a little bumpy. The regressionline sommths out the bumps. If the graph of averages is a straight line, then it coincides with the regression line. If the graph of averages has a strong non-linear pattern, regression may be inapprociate.
+3.  The regression line can be used to make predictions for individuals. But if you have to extrapolate far from the data, or to a different group of subjects, be careful.
+4.  In a typical test-retest situation, the subjects get different scores on the two tests. Take the bottom group on the first test. Some imporve on the second test, other do worse. On average, the bottom group shows an improvement. Now, the top group: some do better the second time, others fall back. On average, the to group does worse the second time. This is the regression effect and it happens whenever the scatter diagram spreads out around the SD line into a football-shaped cloud of points.
+5.  The regression fallacy consists in thinking that the regression effect must be due to somethin other than spread around the SD line.
+
+#Chapter 11 The R.M.S. Error for regression
+##Within chapter
+
+1.  The distance of a point above or below the regressionline is
+ $$error = actual - predicted$$
+2.  The r.m.s. error for regression says how far typical points are above or below the regressionline
+3.  The SD of y says how far typical points are above or below a horizontal line through the average of y. In other words, the SD of y is the r.m.s. error for the baseline method - predicting y by its average, just ignoring the x - values.
+4.  The r.m.s.error for the regression line of y on x can be figured as
+$$\sqrt{1-r^2} \times \text{the SD of y}$$
+5.  The units for the r.m.s. error are the same as the units for the variable being predicted.
+6.  The residuals average out to 0; and the regressionline for the residual plot is horizontal.
+7.  Suppose that a scatter diagram is football-shaped. Take the points in a narrow vertical strip. They will be off the regressionline (up or down) by amounts similar in size to the r.m.s. error. If the diagram is heteroscedastic, the r.m.s. error should not be used for individual strips.
+8.  Suppose that a scatter diagram is football-shaped. Take the points in a narrow vertical strip. Their y-values are a new data set. The new average is estimated by the regression method. The new SD is about equal to the r.m.s error for the regression line.
+
+##Summary
+1.  When the regresionline is used to predict y from x, the difference between the actual value and the predicted values is a residual, or prediction error.
+2.  In a scatter diagram, the vertical distance of a point above or below the regression line is the graphical counterpart of the prediction error made by the regression metheod.
+3.  The r.m.s. error of the regression line is the root-mean square of the residuals. This measures the accuracy of the regression predictions. THe predictions are off by amounts similar in size to the r.m.s. error. For many scatter diagrams, about 68% of the predictions will be right to within one r.m.s. error. About 95% will be right to within two r.m.s. errors.
+4.  The SD of y is equal to the r.m.s. error of a horizontal line through the average of y. The r.m.s. error of the regression line is smaller by the factor $\sqrt{1-r^2}$. Therefore, the r.m.s. error for the regression line of y on x can be figured as 
+$$\sqrt{1-r^2}\times \text{the SD of y}$$
+5.  After carrying out a regression, statisticians often graph the residuals. If the residual plot shows a pattern, the regression may not have been appropriate.
+6.  When all the vertical strips in a scatter diagram show similar amounts of spread, the diagram is homoscedastic: the prediction erros are similar in size all along the regression line. When the scatter diagram is heteroscedastic, the prediction errors are different in different parts of the scatter diagram. Football-shaped diagrams are homoscedastic.
+7.  Suppose that a scatter diagram is football-shaped. Take the points inside a narrow vertical strip. Their y-values are a new data set. The new average is estimated by the regression method. The new SD is about equal to the r.m.s. eror for the regression line. And the normal approximation can be done as ususal, based on the new average and the new SD.
